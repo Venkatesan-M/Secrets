@@ -31,7 +31,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://Venkatesan:Venka@cluster0.zcxvzob.mongodb.net/Secret'); 
+mongoose.connect(process.env.MONGOOSE_ID); 
 
 const UserSchema = new mongoose.Schema({
     Email: String,
